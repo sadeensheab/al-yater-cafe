@@ -1,132 +1,265 @@
 
+// ===================================
+// AL YATER COFFEE HOUSE
+// ===================================
+
+// صور المنتجات من Unsplash
+const photos = {
+  turkish: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=85",
+  coffee: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=85",
+  latte: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=85",
+  tea: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=700&q=85",
+  hot: "https://images.unsplash.com/photo-1578374173705-969cbe6f2b6b?auto=format&fit=crop&w=700&q=85",
+  juice: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=700&q=85",
+  mojito: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?auto=format&fit=crop&w=700&q=85",
+  strawberry: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=700&q=85",
+  milkshake: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=700&q=85",
+  chocolate: "https://images.unsplash.com/photo-1542990253-0b8be5d7b4c0?auto=format&fit=crop&w=700&q=85",
+  watermelon: "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=700&q=85",
+  pomegranate: "https://images.unsplash.com/photo-1541344999736-83eca272f6fc?auto=format&fit=crop&w=700&q=85",
+  avocado: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&w=700&q=85",
+  hookah: "https://images.unsplash.com/photo-1532635241-17e820acc59f?auto=format&fit=crop&w=700&q=85",
+  soda: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?auto=format&fit=crop&w=700&q=85",
+  berry: "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=700&q=85"
+};
+
+// ===================================
+// MENU DATA
+// ===================================
+
 const menuItems = {
   hot: [
-    ["قهوة تركي صغيرة", "1.00 دينار", "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=85"],
-    ["قهوة تركي كبيرة", "1.50 دينار", "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=85"],
-    ["استكانة شاي", "1.00 دينار", "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=85"],
-    ["نسكافيه", "1.00 دينار", "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=85"],
-    ["شوكولاتة ساخنة", "1.00 دينار", "https://images.unsplash.com/photo-1517578239113-b03992dcdd25?auto=format&fit=crop&w=800&q=85"],
-    ["شاي كرك", "1.00 دينار", "https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=800&q=85"],
-    ["لاتيه", "1.00 دينار", "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=85"],
-    ["نسكافيه بالبندق", "1.00 دينار", "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=85"],
-    ["زهورات", "1.00 دينار", "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=85"],
-    ["بابونج", "1.00 دينار", "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=800&q=85"],
-    ["مليسة", "1.00 دينار", "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=800&q=85"],
-    ["زنجبيل مع ليمون وعسل", "1.50 دينار", "https://images.unsplash.com/photo-1513558161293-cdaf765edfd47?auto=format&fit=crop&w=800&q=85"]
+    { name: "قهوة تركي صغير", price: "1 دينار", image: photos.turkish },
+    { name: "قهوة تركي كبير", price: "1.5 دينار", image: photos.coffee },
+    { name: "استكانة شاي", price: "1 دينار", image: photos.tea },
+    { name: "نسكافيه", price: "1 دينار", image: photos.coffee },
+    { name: "شوكولاتة ساخنة", price: "1 دينار", image: photos.chocolate },
+    { name: "شاي كرك", price: "1 دينار", image: photos.tea },
+    { name: "لاتيه", price: "1 دينار", image: photos.latte },
+    { name: "نسكافيه بالبندق", price: "1 دينار", image: photos.coffee },
+    { name: "زهورات", price: "1 دينار", image: photos.tea },
+    { name: "بابونج", price: "1 دينار", image: photos.tea },
+    { name: "مليسة", price: "1 دينار", image: photos.tea },
+    { name: "زنجبيل مع ليمون وعسل", price: "1.5 دينار", image: photos.hot }
   ],
 
   cold: [
-    ["بيبسي", "1.00 دينار", "https://images.unsplash.com/photo-1554866585-cd94860890b7?auto=format&fit=crop&w=800&q=85"],
-    ["سفن أب", "1.00 دينار", "https://images.unsplash.com/photo-1513558161293-cdaf765edfd47?auto=format&fit=crop&w=800&q=85"],
-    ["ميرندا", "1.00 دينار", "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?auto=format&fit=crop&w=800&q=85"],
-    ["باربيكان", "1.00 دينار", "https://images.unsplash.com/photo-1608270586620-248524c67de9?auto=format&fit=crop&w=800&q=85"],
-    ["بي إم (BM)", "1.25 دينار", "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=85"],
-    ["بوم بوم", "1.75 دينار", "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=85"]
+    { name: "بيبسي", price: "1 دينار", image: photos.soda },
+    { name: "سفن أب", price: "1 دينار", image: photos.soda },
+    { name: "ميرندا", price: "1 دينار", image: photos.soda },
+    { name: "باربيكان", price: "1 دينار", image: photos.soda },
+    { name: "مكس بطيخ", price: "السعر عند الطلب", image: photos.watermelon },
+    { name: "مكس رمان", price: "السعر عند الطلب", image: photos.pomegranate },
+    { name: "مكس باشن فروت", price: "السعر عند الطلب", image: photos.juice }
   ],
 
   juice: [
-    ["ليمون ونعناع", "السعر عند الطلب", "https://images.unsplash.com/photo-1513558161293-cdaf765edfd47?auto=format&fit=crop&w=800&q=85"],
-    ["عصير برتقال", "السعر عند الطلب", "https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=800&q=85"],
-    ["كوكتيل فراولة وموز بالحليب", "السعر عند الطلب", "https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=800&q=85"],
-    ["كوكتيل فواكه مشكل", "السعر عند الطلب", "https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=800&q=85"],
-    ["سلاش ليمون", "السعر عند الطلب", "https://images.unsplash.com/photo-1513558161293-cdaf765edfd47?auto=format&fit=crop&w=800&q=85"],
-    ["أفوكادو بالعسل والقشطة", "السعر عند الطلب", "https://images.unsplash.com/photo-1525385133512-2f3bdd039054?auto=format&fit=crop&w=800&q=85"],
-    ["عصير أفوكادو", "السعر عند الطلب", "https://images.unsplash.com/photo-1525385133512-2f3bdd039054?auto=format&fit=crop&w=800&q=85"],
-    ["عصير رمان", "السعر عند الطلب", "https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=800&q=85"]
+    { name: "ليمون ونعناع", price: "السعر عند الطلب", image: photos.mojito },
+    { name: "موهيتو سفن أب", price: "السعر عند الطلب", image: photos.mojito },
+    { name: "موهيتو سفن أب حامض", price: "السعر عند الطلب", image: photos.mojito },
+    { name: "موهيتو سفن أب حلو", price: "السعر عند الطلب", image: photos.mojito },
+    { name: "عصير برتقال", price: "السعر عند الطلب", image: photos.juice },
+    { name: "كوكتيل فراولة وموز بالحليب", price: "السعر عند الطلب", image: photos.strawberry },
+    { name: "كوكتيل فواكه مشكل", price: "السعر عند الطلب", image: photos.berry },
+    { name: "سلاش ليمون", price: "السعر عند الطلب", image: photos.mojito },
+    { name: "عصير أفوكادو بالعسل والقشطة", price: "السعر عند الطلب", image: photos.avocado },
+    { name: "عصير أفوكادو", price: "السعر عند الطلب", image: photos.avocado },
+    { name: "عصير رمان", price: "السعر عند الطلب", image: photos.pomegranate }
   ],
 
   milkshake: [
-    ["أوريو", "السعر عند الطلب", "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=85"],
-    ["سنكرز", "السعر عند الطلب", "https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format&fit=crop&w=800&q=85"],
-    ["كيت كات", "السعر عند الطلب", "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=85"],
-    ["بيستاشيو", "السعر عند الطلب", "https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format&fit=crop&w=800&q=85"],
-    ["نوتيلا", "السعر عند الطلب", "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=85"],
-    ["لوتس", "السعر عند الطلب", "https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format&fit=crop&w=800&q=85"],
-    ["عربي", "السعر عند الطلب", "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=85"]
+    { name: "ميلك شيك أوريو", price: "السعر عند الطلب", image: photos.milkshake },
+    { name: "ميلك شيك سنكرز", price: "السعر عند الطلب", image: photos.chocolate },
+    { name: "ميلك شيك كيت كات", price: "السعر عند الطلب", image: photos.chocolate },
+    { name: "ميلك شيك بيستاشيو", price: "السعر عند الطلب", image: photos.milkshake },
+    { name: "ميلك شيك نوتيلا", price: "السعر عند الطلب", image: photos.chocolate },
+    { name: "ميلك شيك لوتس", price: "السعر عند الطلب", image: photos.milkshake },
+    { name: "ميلك شيك عربي", price: "السعر عند الطلب", image: photos.milkshake }
   ],
 
   mix: [
-    ["موهيتو سفن أب", "السعر عند الطلب", "https://images.unsplash.com/photo-1513558161293-cdaf765edfd47?auto=format&fit=crop&w=800&q=85"],
-    ["موهيتو سفن أب حامض", "السعر عند الطلب", "https://images.unsplash.com/photo-1513558161293-cdaf765edfd47?auto=format&fit=crop&w=800&q=85"],
-    ["موهيتو سفن أب حلو", "السعر عند الطلب", "https://images.unsplash.com/photo-1513558161293-cdaf765edfd47?auto=format&fit=crop&w=800&q=85"],
-    ["مكس بي إم حلو", "السعر عند الطلب", "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=85"],
-    ["مكس بي إم حامض", "السعر عند الطلب", "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=85"],
-    ["مكس بي إم حامض حلو", "السعر عند الطلب", "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=85"],
-    ["مكس بي إم فراولة", "السعر عند الطلب", "https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=800&q=85"],
-    ["مكس بي إم توت", "السعر عند الطلب", "https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=800&q=85"],
-    ["مكس بوم بوم حلو", "السعر عند الطلب", "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=85"],
-    ["مكس بوم بوم حامض", "السعر عند الطلب", "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=85"],
-    ["مكس بوم بوم حامض حلو", "السعر عند الطلب", "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=85"],
-    ["مكس بوم بوم فراولة", "السعر عند الطلب", "https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=800&q=85"],
-    ["مكس بوم بوم توت", "السعر عند الطلب", "https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=800&q=85"],
-    ["مكس بطيخ", "السعر عند الطلب", "https://images.unsplash.com/photo-1563114773-84221bd62daa?auto=format&fit=crop&w=800&q=85"],
-    ["مكس رمان", "السعر عند الطلب", "https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=800&q=85"],
-    ["مكس باشن فروت", "السعر عند الطلب", "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=85"]
+    { name: "خلطة BM حلو", price: "1.25 دينار", image: photos.berry },
+    { name: "خلطة BM حامض", price: "1.25 دينار", image: photos.berry },
+    { name: "خلطة BM حامض حلو", price: "1.25 دينار", image: photos.berry },
+    { name: "خلطة BM فراولة", price: "1.25 دينار", image: photos.strawberry },
+    { name: "خلطة BM توت", price: "1.25 دينار", image: photos.berry },
+    { name: "خلطة بوم بوم حلو", price: "1.75 دينار", image: photos.berry },
+    { name: "خلطة بوم بوم حامض", price: "1.75 دينار", image: photos.berry },
+    { name: "خلطة بوم بوم حامض حلو", price: "1.75 دينار", image: photos.berry },
+    { name: "خلطة بوم بوم فراولة", price: "1.75 دينار", image: photos.strawberry },
+    { name: "خلطة بوم بوم توت", price: "1.75 دينار", image: photos.berry }
   ],
 
   argileh: [
-    ["تفاحتين نخلة", "3.00 دنانير", ""],
-    ["تفاحتين مزايا", "2.50 دينار", ""],
-    ["ليمون ونعنع", "2.50 دينار", ""],
-    ["بطيخ ونعنع", "2.50 دينار", ""],
-    ["علكة وقرفة", "2.50 دينار", ""],
-    ["عنب وتوت", "2.50 دينار", ""],
-    ["تجديد رأس الزغلول", "1.50 دينار", ""],
-    ["تجديد الرأس", "2.00 دينار", ""],
-    ["زغلول", "2.00 دينار", ""]
+    { name: "تفاحتين نخلة", price: "3 دنانير", image: photos.hookah },
+    { name: "تفاحتين مزايا", price: "2.5 دينار", image: photos.hookah },
+    { name: "ليمون ونعنع", price: "2.5 دينار", image: photos.hookah },
+    { name: "بطيخ ونعنع", price: "2.5 دينار", image: photos.hookah },
+    { name: "علكة وقرفة", price: "2.5 دينار", image: photos.hookah },
+    { name: "عنب وتوت", price: "2.5 دينار", image: photos.hookah },
+    { name: "زغلول", price: "2 دينار", image: photos.hookah },
+    { name: "تجديد رأس الزغلول", price: "1.5 دينار", image: photos.hookah },
+    { name: "تجديد الرأس", price: "2 دينار", image: photos.hookah }
   ]
 };
 
-const menuGrid = document.getElementById("menuGrid");
-const tabs = document.querySelectorAll(".menu-tabs .tab");
+// ===================================
+// DISPLAY MENU
+// ===================================
 
-function renderMenu(category) {
+const menuGrid = document.getElementById("menuGrid");
+const menuTabs = document.querySelectorAll(".menu-tab");
+
+function showMenu(category) {
   if (!menuGrid || !menuItems[category]) return;
 
-  menuGrid.innerHTML = menuItems[category].map(([name, price, image]) => `
-    <article class="menu-card">
-      ${image ? `
-        <img
-          src="${image}"
-          alt="${name}"
-          loading="lazy"
-          onerror="this.style.display='none'"
-        >
-      ` : ""}
-      <div class="menu-card-body">
-        <h3>${name}</h3>
-        <span class="price">${price}</span>
-      </div>
-    </article>
-  `).join("");
+  menuGrid.innerHTML = "";
+
+  menuItems[category].forEach((item, index) => {
+    const card = document.createElement("article");
+    card.className = "menu-card";
+    card.style.animationDelay = `${index * 0.04}s`;
+
+    const imageBox = document.createElement("div");
+    imageBox.className = "menu-card-image";
+
+    const image = document.createElement("img");
+    image.src = item.image;
+    image.alt = item.name;
+    image.loading = "lazy";
+    image.onerror = () => {
+      imageBox.innerHTML = '<div class="image-fallback">الياطر</div>';
+    };
+
+    imageBox.appendChild(image);
+
+    const body = document.createElement("div");
+    body.className = "menu-card-body";
+
+    const title = document.createElement("h3");
+    title.textContent = item.name;
+
+    const description = document.createElement("p");
+    description.textContent = "من اختيارات كوفي الياطر";
+
+    const price = document.createElement("span");
+    price.className = "menu-price";
+    price.textContent = item.price;
+
+    body.append(title, description, price);
+    card.append(imageBox, body);
+    menuGrid.appendChild(card);
+  });
 }
 
-tabs.forEach(tab => {
+menuTabs.forEach(tab => {
   tab.addEventListener("click", () => {
-    tabs.forEach(item => item.classList.remove("active"));
+    menuTabs.forEach(item => item.classList.remove("active"));
     tab.classList.add("active");
-    renderMenu(tab.dataset.category);
+    showMenu(tab.dataset.category);
   });
 });
 
-renderMenu("hot");
+// أول تصنيف يظهر
+showMenu("hot");
+
+// ===================================
+// HERO SLIDER
+// ===================================
+
+const heroSlides = document.querySelectorAll(".hero-slide");
+let currentSlide = 0;
+
+if (heroSlides.length > 1) {
+  setInterval(() => {
+    heroSlides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % heroSlides.length;
+    heroSlides[currentSlide].classList.add("active");
+  }, 5000);
+}
+
+// ===================================
+// MOBILE NAVIGATION
+// ===================================
 
 const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
+const nav = document.getElementById("nav");
 
-if (menuToggle && mainNav) {
+if (menuToggle && nav) {
   menuToggle.addEventListener("click", () => {
-    mainNav.classList.toggle("open");
+    nav.classList.toggle("open");
+    menuToggle.classList.toggle("active");
   });
 
-  mainNav.querySelectorAll("a").forEach(link => {
+  nav.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
-      mainNav.classList.remove("open");
+      nav.classList.remove("open");
+      menuToggle.classList.remove("active");
     });
   });
 }
 
-const year = document.getElementById("year");
-if (year) {
-  year.textContent = new Date().getFullYear();
+// ===================================
+// STICKY HEADER
+// ===================================
+
+const header = document.getElementById("header");
+
+function updateHeader() {
+  if (header) {
+    header.classList.toggle("scrolled", window.scrollY > 50);
+  }
 }
+
+window.addEventListener("scroll", updateHeader);
+updateHeader();
+
+// ===================================
+// REVEAL ANIMATION
+// ===================================
+
+const revealElements = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12
+  });
+
+  revealElements.forEach(element => observer.observe(element));
+} else {
+  revealElements.forEach(element => element.classList.add("visible"));
+}
+
+// ===================================
+// FOOTER YEAR
+// ===================================
+
+const yearElement = document.getElementById("year");
+
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
+
+// ===================================
+// PAGE LOADER
+// ===================================
+
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+
+  if (loader) {
+    setTimeout(() => {
+      loader.classList.add("hide");
+      document.body.classList.remove("loading");
+    }, 500);
+  }
+});
+
+document.body.classList.add("loading");
