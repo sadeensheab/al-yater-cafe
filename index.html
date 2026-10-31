@@ -5,93 +5,115 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#1b0d07">
-<title>كوفي الياطر | حكاية مذاق أصيل منذ 1995</title>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>كوفي الياطر | حكاية مذاق أصيل</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--dark:#1b0d07;--brown:#32190e;--gold:#d6a45c;--light:#f1d39b;--cream:#f2e3c9;--muted:#cbb69c}
+:root{
+  --bg:#170b06;--panel:#28150c;--panel2:#351d10;
+  --gold:#d5a45d;--gold2:#f0d5a3;--cream:#f4e7d1;
+  --muted:#c5ad91;--line:#73502e;
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--dark);color:#f8eddb;font-family:Cairo,sans-serif;line-height:1.8}
+body{background:var(--bg);color:var(--cream);font-family:Cairo,sans-serif;line-height:1.8}
 a{text-decoration:none;color:inherit}
-button{font:inherit;cursor:pointer}
-.container{width:min(1160px,92%);margin:auto}
-header{position:sticky;top:0;z-index:10;background:#1b0d07f5;border-bottom:1px solid #76502d}
-nav{min-height:78px;display:flex;justify-content:space-between;align-items:center;gap:20px}
-.logo{font: bold 28px Amiri;color:var(--light)}
-.logo small{display:block;font:10px Cairo;text-align:center;letter-spacing:3px;color:var(--gold)}
-.links{display:flex;gap:24px;align-items:center}
-.links a{font-size:14px;color:#eee0cc}
+button{font:inherit}
+.container{width:min(1180px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:#170b06f5;border-bottom:1px solid #604125;backdrop-filter:blur(12px)}
+nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font:700 29px Amiri;color:var(--gold2);line-height:1.15}
+.logo small{display:block;text-align:center;font:10px Cairo;letter-spacing:4px;color:var(--gold)}
+.links{display:flex;align-items:center;gap:23px}
+.links a{font-size:13px;color:#e9d9c4;transition:.2s}
 .links a:hover{color:var(--gold)}
-.phone{border:1px solid var(--gold);padding:7px 14px;border-radius:25px;color:var(--light)!important}
-.toggle{display:none;background:none;color:var(--light);border:1px solid var(--gold);padding:5px 12px;border-radius:7px;font-size:22px}
-.hero{min-height:620px;display:flex;align-items:center;background:linear-gradient(90deg,#1b0d0730,#1b0d07ed 75%),url('صور%20الياطر/f9451ed6-93fb-4a45-b19f-272933cec38a.jpg') center/cover}
-.hero-content{padding:90px 0}
-.kicker{color:var(--gold);letter-spacing:3px;font-size:13px}
-h1{font: bold clamp(48px,7vw,82px) Amiri;color:var(--light);line-height:1.3}
-.hero h2{font-size:24px;color:var(--cream);font-weight:500}
-.hero p{max-width:520px;color:#e6d5c0;margin:18px 0 28px}
-.btn{display:inline-block;padding:11px 24px;border:1px solid var(--gold);border-radius:7px;margin:4px;font-weight:bold}
-.primary{background:var(--gold);color:#211006}
-.outline{color:var(--light)}
-.features{background:var(--cream);color:#32190e;padding:25px 0}
-.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
-.feature{padding:10px;border-left:1px solid #c5a47a}
+.phone{border:1px solid var(--gold);padding:7px 13px;border-radius:30px}
+.toggle{display:none;background:none;border:1px solid var(--gold);color:var(--gold);padding:5px 12px;border-radius:7px;font-size:22px}
+.hero{min-height:660px;display:flex;align-items:center;position:relative;background:linear-gradient(90deg,rgba(23,11,6,.08),rgba(23,11,6,.93) 76%),url('صور%20الياطر/f9451ed6-93fb-4a45-b19f-272933cec38a.jpg') center/cover}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:100px;background:linear-gradient(transparent,var(--bg))}
+.hero-content{position:relative;z-index:1;padding:100px 0}
+.eyebrow{color:var(--gold);font-size:13px;letter-spacing:3px}
+h1{font:700 clamp(55px,8vw,94px) Amiri;color:var(--gold2);line-height:1.25}
+.hero h2{font:700 24px Amiri;color:#f4e5cd}
+.hero p{max-width:520px;color:#e2d1bc;margin:17px 0 27px;font-size:15px}
+.btn{display:inline-block;padding:11px 23px;border-radius:5px;margin:4px;font-weight:700;font-size:14px}
+.btn-gold{background:var(--gold);color:#241207}
+.btn-line{border:1px solid var(--gold);color:var(--gold2)}
+.features{background:#ead6b7;color:#2a170c;padding:25px 0}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.feature{text-align:center;border-left:1px solid #c5a47b;padding:7px}
 .feature:last-child{border:0}
-.feature span{display:block;font-size:30px;color:#9c5d24}
-section{padding:80px 0}
-.heading{text-align:center;margin-bottom:38px}
-.heading span{color:var(--gold);letter-spacing:3px;font-size:13px}
-.heading h2{font: bold 43px Amiri;color:var(--light)}
-.heading p{color:var(--muted);font-size:14px}
-.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.story-photo{padding:10px;border:1px solid var(--gold);background:var(--brown)}
-.story-photo img{width:100%;height:390px;object-fit:cover;display:block}
-.story-text h2{font: bold 40px Amiri;color:var(--light);margin:10px 0}
-.story-text p{color:#d9c5ac;margin:12px 0}
-.menu-section{background:linear-gradient(#291408,#160903);border-block:1px solid #674525}
-.tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:30px}
-.tab{background:transparent;color:var(--cream);border:1px solid #8b6037;padding:9px 19px;border-radius:30px}
+.feature span{display:block;font-size:27px;color:#9a5d2b}
+.feature b{font-size:14px}
+section{padding:82px 0}
+.section-title{text-align:center;margin-bottom:38px}
+.section-title span{color:var(--gold);font-size:12px;letter-spacing:3px}
+.section-title h2{font:700 43px Amiri;color:var(--gold2)}
+.section-title p{color:var(--muted);font-size:13px}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.story-image{border:1px solid var(--gold);padding:9px;background:var(--panel)}
+.story-image img{width:100%;height:420px;object-fit:cover;display:block}
+.story-copy h2{font:700 43px Amiri;color:var(--gold2);margin:8px 0}
+.story-copy p{color:#d5c1a7;margin:12px 0;font-size:15px}
+.story-copy .ornament{color:var(--gold);font-size:25px}
+.menu-section{background:linear-gradient(145deg,#2b170d,#170a05);border-block:1px solid #68482a}
+.tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin-bottom:28px}
+.tab{border:1px solid #8a6238;background:transparent;color:var(--cream);padding:9px 17px;border-radius:30px;cursor:pointer;font-size:13px}
 .tab.active,.tab:hover{background:var(--gold);color:#211006}
-.menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
-.item{background:#382013;border:1px solid #79502e;border-radius:12px;overflow:hidden;transition:.25s}
-.item:hover{transform:translateY(-5px)}
-.item img{width:100%;height:160px;object-fit:cover;display:block}
-.item-info{text-align:center;padding:12px}
-.item-info h3{color:var(--light);font-size:16px}
-.price{display:inline-block;background:var(--gold);color:#211006;padding:2px 14px;border-radius:20px;font-size:13px;font-weight:bold;margin-top:7px}
-.note{text-align:center;color:var(--muted);font-size:13px;margin-top:20px}
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.gallery img{width:100%;height:230px;object-fit:cover;border:1px solid #79502e;border-radius:9px;transition:.25s}
-.gallery img:hover{transform:scale(1.025)}
-.contact{background:#120802;border-top:1px solid #674525}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
-.contact-card{background:#2b160d;border:1px solid #79502e;border-radius:12px;padding:28px}
-.contact-card h3{font: bold 28px Amiri;color:var(--light);margin-bottom:14px}
-.contact-card p{color:#ddcbb4;margin:12px 0}
-.map{min-height:210px;background:linear-gradient(135deg,#65462e,#241208);border-radius:9px;display:grid;place-items:center;text-align:center;padding:20px;color:var(--light)}
-.map span{font-size:40px}
-footer{text-align:center;padding:25px;color:var(--muted);font-size:13px;border-top:1px solid #674525}
-footer strong{color:var(--light)}
-@media(max-width:850px){.links{gap:12px}.links a{font-size:12px}.menu-grid{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.menu-card{background:linear-gradient(135deg,#3a2113,#251208);border:1px solid #76502e;border-radius:9px;padding:17px 18px;display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:75px;transition:.2s}
+.menu-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.menu-card h3{font-size:14px;color:var(--gold2);font-weight:600}
+.menu-card small{display:block;color:var(--muted);font-size:11px}
+.price{white-space:nowrap;color:#281507;background:var(--gold);border-radius:30px;padding:3px 11px;font-size:12px;font-weight:800}
+.price.no-price{background:#4a3020;color:#e5cda9}
+.menu-note{text-align:center;color:var(--muted);font-size:12px;margin-top:20px}
+.story-band{background:#ead6b7;color:#29170d;padding:30px 0}
+.story-band .container{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
+.story-band strong{font:700 25px Amiri;display:block}
+.story-band span{font-size:12px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.gallery figure{overflow:hidden;border:1px solid #78532f;border-radius:7px;background:var(--panel)}
+.gallery img{width:100%;height:230px;object-fit:cover;display:block;transition:.4s}
+.gallery figure:hover img{transform:scale(1.05)}
+.contact{background:#100702;border-top:1px solid #68482a}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.contact-card{background:#29150c;border:1px solid #76502e;border-radius:10px;padding:28px}
+.contact-card h3{font:700 27px Amiri;color:var(--gold2);margin-bottom:12px}
+.contact-card p{color:#dfcbb1;margin:10px 0;font-size:14px}
+.map-link{display:block;background:linear-gradient(135deg,#60452e,#28150b);border:1px solid #8a6238;border-radius:8px;padding:35px 15px;text-align:center;color:var(--gold2)}
+.map-link strong{display:block;font-size:18px}
+.map-link span{font-size:34px}
+.social{display:flex;gap:10px;margin-top:20px}
+.social a{border:1px solid var(--gold);border-radius:50%;width:38px;height:38px;display:grid;place-items:center;color:var(--gold)}
+footer{text-align:center;padding:25px;color:var(--muted);font-size:12px;border-top:1px solid #51351f}
+footer b{color:var(--gold2)}
+@media(max-width:850px){
+ .links{gap:12px}.links a{font-size:11px}
+ .menu-grid{grid-template-columns:repeat(2,1fr)}
+ .gallery{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:650px){
-.toggle{display:block}
-.links{display:none;position:absolute;top:78px;right:0;left:0;background:#211006;padding:20px;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--gold)}
-.links.open{display:flex}
-.links a{font-size:15px;padding:6px}
-.hero{min-height:540px;background-position:center}
-.hero-content{padding:65px 0}
-.feature-grid{grid-template-columns:repeat(2,1fr)}
-.feature:nth-child(2){border-left:0}
-section{padding:60px 0}
-.heading h2{font-size:36px}
-.story-grid,.contact-grid{grid-template-columns:1fr;gap:25px}
-.story-photo img{height:280px}
-.menu-grid{gap:10px}
-.item img{height:125px}
-.item-info{padding:9px 4px}
-.item-info h3{font-size:14px}
-.gallery{gap:9px}
-.gallery img{height:150px}
+ nav{height:72px}.toggle{display:block}
+ .links{display:none;position:absolute;top:72px;right:0;left:0;background:#1b0d07;padding:18px 5%;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--gold)}
+ .links.open{display:flex}.links a{font-size:14px;padding:5px}
+ .hero{min-height:570px;background-position:55% center}
+ .hero-content{padding:75px 0}
+ .feature-grid{grid-template-columns:repeat(2,1fr);row-gap:12px}
+ .feature:nth-child(2){border-left:0}
+ section{padding:58px 0}
+ .section-title h2{font-size:36px}
+ .story{grid-template-columns:1fr;gap:25px}
+ .story-image img{height:290px}
+ .story-copy h2{font-size:36px}
+ .menu-grid{gap:9px}
+ .menu-card{padding:12px 10px;min-height:75px}
+ .menu-card h3{font-size:12px}
+ .price{font-size:10px;padding:3px 7px}
+ .gallery{gap:9px}
+ .gallery img{height:160px}
+ .contact-grid{grid-template-columns:1fr}
+ .story-band .container{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -100,14 +122,14 @@ section{padding:60px 0}
 <header>
 <div class="container">
 <nav>
-<a class="logo" href="#home">كوفي الياطر<small>SINCE 1995</small></a>
-<button class="toggle" id="toggle">☰</button>
+<a href="#home" class="logo">كوفي الياطر<small>SINCE 1995</small></a>
+<button class="toggle" id="toggle" aria-label="القائمة">☰</button>
 <div class="links" id="links">
 <a href="#home">الرئيسية</a>
-<a href="#story">عن الكوفي</a>
+<a href="#story">حكايتنا</a>
 <a href="#menu">القائمة</a>
-<a href="#gallery">الصور</a>
-<a href="#contact">اتصل بنا</a>
+<a href="#gallery">صور المكان</a>
+<a href="#contact">تواصل معنا</a>
 <a class="phone" href="tel:0796454923">☎ 0796454923</a>
 </div>
 </nav>
@@ -117,85 +139,97 @@ section{padding:60px 0}
 <main>
 <section class="hero" id="home">
 <div class="container hero-content">
-<div class="kicker">أهلاً وسهلاً بكم</div>
+<div class="eyebrow">أهلاً وسهلاً بكم في عالم الياطر</div>
 <h1>كوفي الياطر</h1>
 <h2>حكاية مذاق أصيل منذ عام 1995</h2>
-<p>مكان يجمع عبق الماضي وراحة الحاضر، وأجواء دافئة للّمة الأحباب والأصدقاء.</p>
-<a class="btn primary" href="#menu">☕ تصفح القائمة</a>
-<a class="btn outline" href="#story">اكتشف حكايتنا</a>
+<p>مكان يجمع عبق الماضي ودفء الحاضر، حيث القهوة والذكريات والجمعة الحلوة مع الأهل والأصدقاء.</p>
+<a class="btn btn-gold" href="#menu">☕ تصفح القائمة</a>
+<a class="btn btn-line" href="#story">اكتشف حكايتنا</a>
 </div>
 </section>
 
 <div class="features">
 <div class="container feature-grid">
-<div class="feature"><span>☕</span><b>مشروبات ساخنة وباردة</b></div>
-<div class="feature"><span>🍹</span><b>عصائر وخلطات متنوعة</b></div>
-<div class="feature"><span>🍳</span><b>فطور ومأكولات</b></div>
-<div class="feature"><span>🎲</span><b>ألعاب وترفيه</b></div>
+<div class="feature"><span>☕</span><b>مشروبات ساخنة</b></div>
+<div class="feature"><span>🍹</span><b>مشروبات باردة</b></div>
+<div class="feature"><span>♟</span><b>ألعاب وجلسات</b></div>
+<div class="feature"><span>🪔</span><b>أجواء تراثية</b></div>
 </div>
 </div>
 
 <section id="story">
-<div class="container story-grid">
-<div class="story-photo">
-<img src="صور%20الياطر/e73a7197-0678-4e98-8f61-396b96880df7.jpg" alt="ذكريات كوفي الياطر">
+<div class="container story">
+<div class="story-image">
+<img src="صور%20الياطر/e73a7197-0678-4e98-8f61-396b96880df7.jpg" alt="من ذكريات كوفي الياطر" loading="lazy">
 </div>
-<div class="story-text">
-<div class="kicker">حكايتنا وذكرياتنا</div>
-<h2>قصة كوفي الياطر</h2>
-<p>منذ عام 1995، نرحب بضيوفنا في أجواء تحمل طابعاً أصيلاً يجمع الناس على القهوة والحديث والذكريات الجميلة.</p>
-<p>نؤمن أن أجمل اللحظات تبدأ بجمعة حلوة، وفنجان قهوة، ومكان تشعر فيه أنك بين أهلك وأصحابك.</p>
-<a class="btn outline" href="#contact">زورونا اليوم ←</a>
+<div class="story-copy">
+<div class="eyebrow">منذ عام 1995</div>
+<h2>حكاية لها ذكريات</h2>
+<div class="ornament">✦ ━━━━━ ✦</div>
+<p>في كوفي الياطر، للمكان حكاية وللجلسة طعم مختلف. أجواء تحمل روح الماضي وتجمع الأحباب والأصدقاء حول فنجان القهوة والحديث الجميل.</p>
+<p>نعتز بذكريات المكان وتفاصيله، ونسعد بأن تكونوا جزءاً من حكايتنا.</p>
+<a class="btn btn-line" href="#gallery">شاهد صور المكان</a>
 </div>
 </div>
 </section>
 
+<div class="story-band">
+<div class="container">
+<div><strong>1995</strong><span>بداية الحكاية</span></div>
+<div><strong>كوفي الياطر</strong><span>أجواء أصيلة وجلسات مميزة</span></div>
+<div><strong>المفرق</strong><span>شارع جرش</span></div>
+</div>
+</div>
+
 <section class="menu-section" id="menu">
 <div class="container">
-<div class="heading">
-<span>مذاقات ترضي جميع الأذواق</span>
+<div class="section-title">
+<span>اختر مذاقك المفضل</span>
 <h2>قائمة المشروبات</h2>
-<p>اختار مشروبك المفضل واستمتع بأجوائنا</p>
+<p>تنوع من المشروبات الساخنة والباردة والخلطات</p>
 </div>
-<div class="tabs">
-<button class="tab active" data-cat="hot">المشروبات الساخنة</button>
-<button class="tab" data-cat="cold">المشروبات الباردة</button>
-<button class="tab" data-cat="juice">العصائر والكوكتيلات</button>
-<button class="tab" data-cat="mix">الخلطات</button>
+<div class="tabs" id="tabs">
+<button class="tab active" data-cat="hot">☕ الساخنة</button>
+<button class="tab" data-cat="cold">🥤 الباردة</button>
+<button class="tab" data-cat="juice">🍹 العصائر والكوكتيلات</button>
+<button class="tab" data-cat="shake">🥛 الميلك شيك</button>
+<button class="tab" data-cat="mojito">🍃 الموهيتو</button>
+<button class="tab" data-cat="mix">خلطات BM وBoom Boom</button>
+<button class="tab" data-cat="argileh">الأراجيل</button>
 </div>
 <div class="menu-grid" id="menuGrid"></div>
-<p class="note">الأسعار بالدينار الأردني، والأسعار غير المتوفرة ستضاف بعد تأكيدها.</p>
+<p class="menu-note">الأسعار بالدينار الأردني. الأصناف التي لم يصلنا سعرها بعد ستظهر بدون سعر لحين تأكيده.</p>
 </div>
 </section>
 
 <section id="gallery">
 <div class="container">
-<div class="heading">
-<span>عيشوا الأجواء</span>
+<div class="section-title">
+<span>تفاصيل من المكان</span>
 <h2>من أجواء كوفي الياطر</h2>
-<p>تفاصيل المكان والذكريات واللحظات الحلوة</p>
+<p>صور حقيقية من المكان وذكرياته وجلساته</p>
 </div>
 <div class="gallery">
-<img src="صور%20الياطر/f9451ed6-93fb-4a45-b19f-272933cec38a.jpg" alt="واجهة الكوفي">
-<img src="صور%20الياطر/0f680829-f1b7-4d8d-a3b5-6e246eef0502.jpg" alt="جلسات الكوفي">
-<img src="صور%20الياطر/4a7b5cfe-2223-4126-8ead-0209073ce97e.jpg" alt="واجهة المكان">
-<img src="صور%20الياطر/5662d9ed-c1a7-4f24-9b26-b882d5c8625b.jpg" alt="ديكور الكوفي">
-<img src="صور%20الياطر/a3617c65-1dfd-4bb6-ae0e-25f1445fa946.jpg" alt="ديكور تراثي">
-<img src="صور%20الياطر/89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg" alt="جلسة وأجواء">
-<img src="صور%20الياطر/728afc42-2aaf-462c-afff-5b368222be5b.jpg" alt="ألعاب وجلسات">
-<img src="صور%20الياطر/b5d9b078-12e6-498d-afbe-ad713e69921e.jpg" alt="ألعاب الشدة">
-<img src="صور%20الياطر/c0d6f805-8e7d-485b-ae80-65a533b6c9a8.jpg" alt="شبابيك المكان">
-<img src="صور%20الياطر/e058a08e-e350-4d2c-a4f2-eafbec0a2562.jpg" alt="أجواء القهوة">
-<img src="صور%20الياطر/61e0e5e8-e4c9-4e5e-8921-0130575f4657.jpg" alt="ذكريات المكان">
-<img src="صور%20الياطر/48e1629b-fd47-4e14-97df-1da34a3ae283.jpg" alt="تفاصيل المكان">
+<figure><img src="صور%20الياطر/f9451ed6-93fb-4a45-b19f-272933cec38a.jpg" alt="واجهة كوفي الياطر" loading="lazy"></figure>
+<figure><img src="صور%20الياطر/0f680829-f1b7-4d8d-a3b5-6e246eef0502.jpg" alt="جلسات الكوفي" loading="lazy"></figure>
+<figure><img src="صور%20الياطر/4a7b5cfe-2223-4126-8ead-0209073ce97e.jpg" alt="واجهة المكان" loading="lazy"></figure>
+<figure><img src="صور%20الياطر/5662d9ed-c1a7-4f24-9b26-b882d5c8625b.jpg" alt="تفاصيل المكان" loading="lazy"></figure>
+<figure><img src="صور%20الياطر/5b467df7-8c0a-4d03-be2f-6e2cbe7121e4.jpg" alt="من أجواء المكان" loading="lazy"></figure>
+<figure><img src="صور%20الياطر/61e0e5e8-e4c9-4e5e-8921-0130575f4657.jpg" alt="ذكريات الياطر" loading="lazy"></figure>
+<figure><img src="صور%20الياطر/728afc42-2aaf-462c-afff-5b368222be5b.jpg" alt="جلسة الأصدقاء" loading="lazy"></figure>
+<figure><img src="صور%20الياطر/89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg" alt="أجواء الكوفي" loading="lazy"></figure>
+<figure><img src="صور%20الياطر/a3617c65-1dfd-4bb6-ae0e-25f1445fa946.jpg" alt="ديكور المكان" loading="lazy"></figure>
+<figure><img src="صور%20الياطر/b5d9b078-12e6-498d-afbe-ad713e69921e.jpg" alt="ألعاب وجلسات" loading="lazy"></figure>
+<figure><img src="صور%20الياطر/c0d6f805-8e7d-485b-ae80-65a533b6c9a8.jpg" alt="تفاصيل تراثية" loading="lazy"></figure>
+<figure><img src="صور%20الياطر/e058a08e-e350-4d2c-a4f2-eafbec0a2562.jpg" alt="جلسات الياطر" loading="lazy"></figure>
 </div>
 </div>
 </section>
 
 <section class="contact" id="contact">
 <div class="container">
-<div class="heading">
-<span>نسعد بزيارتكم</span>
+<div class="section-title">
+<span>ننتظركم بكل محبة</span>
 <h2>تواصلوا معنا</h2>
 <p>أهلاً وسهلاً فيكم في كوفي الياطر</p>
 </div>
@@ -203,13 +237,19 @@ section{padding:60px 0}
 <div class="contact-card">
 <h3>معلومات التواصل</h3>
 <p>☎ الهاتف: <a href="tel:0796454923">0796454923</a></p>
-<p>📍 الموقع: المفرق – شارع جرش</p>
-<a class="btn primary" href="https://wa.me/962796454923" target="_blank" rel="noopener">تواصل عبر واتساب</a>
+<p>📍 العنوان: المفرق – شارع جرش</p>
+<a class="btn btn-gold" href="https://wa.me/962796454923" target="_blank" rel="noopener">تواصل عبر واتساب</a>
+<div class="social">
+<a href="https://www.facebook.com/" aria-label="فيسبوك">f</a>
+<a href="https://www.instagram.com/" aria-label="إنستغرام">◎</a>
+</div>
 </div>
 <div class="contact-card">
-<h3>موقعنا</h3>
-<a href="https://www.google.com/maps/search/?api=1&query=كوفي+الياطر+المفرق+شارع+جرش" target="_blank" rel="noopener">
-<div class="map"><div><span>📍</span><br><b>المفرق – شارع جرش</b><br>اضغط لفتح الموقع على خرائط Google</div></div>
+<h3>موقعنا على الخريطة</h3>
+<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=كوفي+الياطر+المفرق+شارع+جرش" target="_blank" rel="noopener">
+<span>📍</span>
+<strong>المفرق – شارع جرش</strong>
+<small>اضغط لفتح الموقع على خرائط Google</small>
 </a>
 </div>
 </div>
@@ -218,55 +258,80 @@ section{padding:60px 0}
 </main>
 
 <footer>
-<p>© 2026 <strong>كوفي الياطر</strong> – جميع الحقوق محفوظة</p>
-<p>صُنع بكل حب بواسطة Velora</p>
+<p>© 2026 <b>كوفي الياطر</b> – جميع الحقوق محفوظة</p>
+<p>تصميم وتطوير <b>Velora</b></p>
 </footer>
 
 <script>
-const base="صور%20الياطر/";
-const data={
+const menuData={
 hot:[
-["قهوة تركي صغيرة","1.00","0f680829-f1b7-4d8d-a3b5-6e246eef0502.jpg"],
-["قهوة تركي كبيرة","1.50","e058a08e-e350-4d2c-a4f2-eafbec0a2562.jpg"],
-["شاي كرك","1.00","48e1629b-fd47-4e14-97df-1da34a3ae283.jpg"],
-["نسكافيه","1.00","e058a08e-e350-4d2c-a4f2-eafbec0a2562.jpg"],
-["شوكولاتة ساخنة","1.00","48e1629b-fd47-4e14-97df-1da34a3ae283.jpg"],
-["لاتيه","1.00","0f680829-f1b7-4d8d-a3b5-6e246eef0502.jpg"],
-["زهورات","1.00","48e1629b-fd47-4e14-97df-1da34a3ae283.jpg"],
-["زنجبيل مع ليمون وعسل","1.50","48e1629b-fd47-4e14-97df-1da34a3ae283.jpg"]
+["قهوة تركي صغيرة","1.00"],["قهوة تركي كبيرة","1.50"],
+["استكانة شاي","1.00"],["نسكافيه","1.00"],
+["شوكولاتة ساخنة","1.00"],["شاي كرك","1.00"],
+["لاتيه","1.00"],["نسكافيه بالبندق","1.00"],
+["زهورات","1.00"],["بابونج","1.00"],
+["مليسة","1.00"],["زنجبيل مع ليمون وعسل","1.50"]
 ],
 cold:[
-["بيبسي","1.00","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
-["سفن أب","1.00","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
-["ميرندا","1.00","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
-["باربيكان","1.00","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
-["ميلك شيك","حسب الصنف","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"]
+["بيبسي","1.00"],["سفن أب","1.00"],
+["ميرندا","1.00"],["باربيكان","1.00"],
+["BM","1.25"],["Boom Boom","1.75"]
 ],
 juice:[
-["ليمون ونعناع","حسب الصنف","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
-["عصير برتقال","حسب الصنف","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
-["كوكتيل فواكه","حسب الصنف","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
-["أفوكادو بالعسل والقشطة","حسب الصنف","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
-["عصير رمان","حسب الصنف","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"]
+["ليمون ونعناع",""],["عصير برتقال",""],
+["كوكتيل فراولة وموز بالحليب",""],["كوكتيل فواكه مشكل",""],
+["سلاش ليمون",""],["أفوكادو بالعسل والقشطة",""],
+["عصير أفوكادو",""],["عصير رمان",""]
+],
+shake:[
+["أوريو",""],["سنكرز",""],["كيت كات",""],
+["بيستاشيو",""],["نوتيلا",""],["لوتس",""],["عربي",""]
+],
+mojito:[
+["سفن أب",""],["سفن أب حامض",""],
+["سفن أب حلو",""],["ليمون ونعناع",""]
 ],
 mix:[
-["خلطات BM","1.25","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
-["خلطات Boom Boom","1.75","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
-["موهيتو","حسب الصنف","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
-["مكسات إضافية","حسب الصنف","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"]
+["مكس BM حلو",""],["مكس BM حامض",""],
+["مكس BM حامض حلو",""],["مكس BM فراولة",""],
+["مكس BM توت",""],["مكس Boom Boom حلو",""],
+["مكس Boom Boom حامض",""],["مكس Boom Boom حامض حلو",""],
+["مكس Boom Boom فراولة",""],["مكس Boom Boom توت",""],
+["مكس بطيخ",""],["مكس رمان",""],["مكس باشن فروت",""]
+],
+argileh:[
+["تفاحتين نخلة","3.00"],["تفاحتين مزايا","2.50"],
+["ليمون ونعنع","2.50"],["بطيخ ونعنع","2.50"],
+["علكة وقرفة","2.50"],["عنب وتوت","2.50"],
+["تجديد رأس الزغلول","1.50"],["تجديد الرأس","2.00"],
+["زغلول","2.00"]
 ]
 };
 const grid=document.getElementById("menuGrid");
-function show(cat){
-grid.innerHTML=data[cat].map(x=>`<article class="item"><img src="${base+x[2]}" alt="${x[0]}" loading="lazy"><div class="item-info"><h3>${x[0]}</h3><span class="price">${x[1]==="حسب الصنف"?x[1]:x[1]+" دينار"}</span></div></article>`).join("");
+function renderMenu(category){
+  grid.innerHTML=menuData[category].map(item=>`
+    <article class="menu-card">
+      <div><h3>${item[0]}</h3></div>
+      <span class="price ${item[1]?'':'no-price'}">${item[1]?item[1]+' دينار':'السعر عند الطلب'}</span>
+    </article>
+  `).join("");
 }
-document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{
-document.querySelector(".tab.active").classList.remove("active");
-b.classList.add("active");show(b.dataset.cat);
-}));
-document.getElementById("toggle").addEventListener("click",()=>document.getElementById("links").classList.toggle("open"));
-document.querySelectorAll(".links a").forEach(a=>a.addEventListener("click",()=>document.getElementById("links").classList.remove("open")));
-show("hot");
+document.querySelectorAll(".tab").forEach(button=>{
+  button.addEventListener("click",()=>{
+    document.querySelector(".tab.active").classList.remove("active");
+    button.classList.add("active");
+    renderMenu(button.dataset.cat);
+  });
+});
+document.getElementById("toggle").addEventListener("click",()=>{
+  document.getElementById("links").classList.toggle("open");
+});
+document.querySelectorAll(".links a").forEach(link=>{
+  link.addEventListener("click",()=>{
+    document.getElementById("links").classList.remove("open");
+  });
+});
+renderMenu("hot");
 </script>
 </body>
 </html>
