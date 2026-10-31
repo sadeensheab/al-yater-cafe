@@ -4,252 +4,166 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#21180f">
-  <meta name="description" content="كوفي الياطر - تجربة قهوة وأجواء تراثية في المفرق منذ عام 1995">
-  <title>كوفي الياطر | منذ 1995</title>
+  <meta name="theme-color" content="#21130d">
+  <meta name="description" content="كوفي الياطر - حكاية مذاق أصيل منذ عام 1995 في المفرق، شارع جرش.">
+  <title>كوفي الياطر | حكاية مذاق أصيل منذ 1995</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="loader" id="loader">
-    <span>الياطر</span>
-    <small>منذ 1995</small>
-  </div>
+  <div class="top-line"></div>
 
-  <header class="header" id="header">
-    <a href="#home" class="logo">
-      <span class="logo-name">الياطر</span>
-      <span class="logo-sub">COFFEE HOUSE · EST. 1995</span>
-    </a>
+  <header class="header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top">
+        <span class="brand-mark">الياطر</span>
+        <span class="brand-caption">SINCE 1995</span>
+      </a>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
-      <span></span><span></span>
-    </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
+        <span></span><span></span><span></span>
+      </button>
 
-    <nav class="nav" id="nav">
-      <a href="#home">الرئيسية</a>
-      <a href="#story">قصتنا</a>
-      <a href="#experience">تجربتنا</a>
-      <a href="#menu">المنيو</a>
-      <a href="#gallery">معرض الصور</a>
-      <a href="#contact" class="nav-contact">زورونا</a>
-    </nav>
+      <nav class="nav" id="mainNav">
+        <a class="active" href="#top">الرئيسية</a>
+        <a href="#story">عن الياطر</a>
+        <a href="#menu">القائمة</a>
+        <a href="#gallery">الصور</a>
+        <a href="#contact">اتصل بنا</a>
+      </nav>
+
+      <a class="header-phone" href="tel:0796454923">
+        <span>0796454923</span>
+        <span class="phone-icon">☎</span>
+      </a>
+    </div>
   </header>
 
   <main>
-
-    <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="hero-slides">
-        <div class="hero-slide active"
-          style="background-image:url('صور%20الياطر/0f680829-f1b7-4d8d-a3b5-6e246eef0502.jpg')"></div>
-        <div class="hero-slide"
-          style="background-image:url('صور%20الياطر/48e1629b-fd47-4e14-97df-1da34a3ae283.jpg')"></div>
-        <div class="hero-slide"
-          style="background-image:url('صور%20الياطر/4a7b5cfe-2223-4126-8ead-0209073ce97e.jpg')"></div>
-      </div>
-
-      <div class="hero-overlay"></div>
-
-      <div class="hero-content">
-        <p class="eyebrow">المفرق · شارع جرش · منذ 1995</p>
-        <h1>للقعدة طعم،<br><em>وللذكريات مكان.</em></h1>
-        <p class="hero-description">
-          أهلاً بك في الياطر... مكان يجمع أصالة الماضي ومتعة اللحظة.
-        </p>
+    <section class="hero">
+      <div class="hero-image" id="heroImage"></div>
+      <div class="hero-shade"></div>
+      <div class="container hero-content">
+        <span class="eyebrow">منذ عام 1995 · المفرق</span>
+        <h1>حكاية مذاق<br><em>أصيل لا يُنسى</em></h1>
+        <p>في الياطر، لكل جلسة حكاية، ولكل فنجان مذاق، وللذكريات مكان يجمعنا.</p>
         <div class="hero-actions">
-          <a href="#menu" class="btn btn-primary">اكتشف المنيو <span>←</span></a>
-          <a href="#story" class="btn btn-outline">اكتشف حكايتنا</a>
+          <a class="btn btn-gold" href="#menu">اكتشف قائمتنا</a>
+          <a class="btn btn-outline" href="#story">حكاية الياطر</a>
         </div>
+        <div class="hero-counter"><span id="slideNumber">01</span><i></i><span>03</span></div>
       </div>
-
       <div class="hero-bottom">
-        <span>SCROLL TO DISCOVER</span>
-        <span class="hero-line"></span>
-        <span>01 — 03</span>
+        <span>أصالة المكان</span><span>✦</span><span>دفء اللقاء</span><span>✦</span><span>منذ 1995</span>
       </div>
     </section>
 
-    <!-- INTRO -->
-    <section class="intro section-pad" id="story">
-      <div class="intro-label reveal">
-        <span class="section-number">01 / حكايتنا</span>
-        <span class="small-line"></span>
-      </div>
-
-      <div class="intro-grid">
-        <div class="intro-heading reveal">
-          <p class="eyebrow dark">حكاية بدأت عام 1995</p>
-          <h2>مش مجرد كوفي...<br><em>هذا مكان إله حكاية.</em></h2>
-        </div>
-
-        <div class="intro-copy reveal">
-          <p>
-            من سنين والياطر مساحة للّمة الحلوة، وفنجان القهوة،
-            والذكريات اللي بتكبر مع الأيام. جمعنا أجواء الماضي
-            الجميل مع تفاصيل الضيافة اللي بتحبوها.
-          </p>
-          <a href="#experience" class="text-link">اكتشف أجواء الياطر <span>←</span></a>
-        </div>
-      </div>
-
-      <div class="story-images">
-        <div class="story-image story-image-large reveal">
-          <img src="صور%20الياطر/48e1629b-fd47-4e14-97df-1da34a3ae283.jpg" alt="أجواء كوفي الياطر">
-          <span class="image-caption">أصالة المكان</span>
-        </div>
-        <div class="story-image story-image-small reveal">
-          <img src="صور%20الياطر/89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg" alt="تفاصيل من الياطر">
-          <span class="image-caption">تفاصيل بتحكي</span>
-        </div>
+    <section class="features">
+      <div class="container features-grid">
+        <div class="feature"><span class="feature-icon">☕</span><div><h3>مشروبات متنوعة</h3><p>ساخنة وباردة</p></div></div>
+        <div class="feature"><span class="feature-icon">♨</span><div><h3>أراجيل مميزة</h3><p>بأجود الأنواع</p></div></div>
+        <div class="feature"><span class="feature-icon">♟</span><div><h3>ألعاب وتسلية</h3><p>شدة وطاولة</p></div></div>
+        <div class="feature"><span class="feature-icon">❖</span><div><h3>أجواء تراثية</h3><p>ذكريات من زمان</p></div></div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section class="experience section-pad" id="experience">
-      <div class="section-heading reveal">
-        <div>
-          <span class="section-number">02 / التجربة</span>
-          <p class="eyebrow">THE YATER EXPERIENCE</p>
-          <h2>كل قعدة إلها <em>جوّها.</em></h2>
-        </div>
-        <p class="section-description">
-          قهوة ومشروبات، أراجيل، شدة وطاولة... اختار جوّك وخلي الباقي علينا.
-        </p>
-      </div>
-
-      <div class="experience-grid">
-        <article class="experience-card experience-card-tall reveal">
-          <img src="صور%20الياطر/5b467df7-8c0a-4d03-be2f-6e2cbe7121e4.jpg" alt="جلسات الياطر">
-          <div class="experience-card-text">
-            <span>01</span>
-            <h3>قعدة على الأصول</h3>
-            <p>أجواء دافئة ولمّة بترد الروح.</p>
+    <section class="section story-section" id="story">
+      <div class="container story-grid">
+        <div class="story-photos">
+          <img src="صور الياطر/48e1629b-fd47-4e14-97df-1da34a3ae283.jpg" alt="من أجواء كوفي الياطر">
+          <div class="story-small">
+            <img src="صور الياطر/89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg" alt="تفاصيل من الياطر">
+            <span>حكاية مستمرة منذ 1995</span>
           </div>
-        </article>
-
-        <article class="experience-card reveal">
-          <img src="صور%20الياطر/5662d9ed-c1a7-4f24-9b26-b882d5c8625b.jpg" alt="الشدة والطاولة">
-          <div class="experience-card-text">
-            <span>02</span>
-            <h3>الشدة والطاولة</h3>
-            <p>اللعب الحلو إله مكانه.</p>
-          </div>
-        </article>
-
-        <article class="experience-card reveal">
-          <img src="صور%20الياطر/61e0e5e8-e4c9-4e5e-8921-0130575f4657.jpg" alt="أجواء الياطر">
-          <div class="experience-card-text">
-            <span>03</span>
-            <h3>أجواء من زمان</h3>
-            <p>تفاصيل تراثية وذكريات جميلة.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- HOOKAH -->
-    <section class="hookah-section">
-      <div class="hookah-image">
-        <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1500&q=85"
-          alt="أجواء جلسة مسائية">
-      </div>
-      <div class="hookah-content reveal">
-        <span class="section-number">03 / الأراجيل</span>
-        <p class="eyebrow">A MOMENT TO RELAX</p>
-        <h2>مزاجك...<br><em>على كيفك.</em></h2>
-        <p>اختيارات متنوعة وأجواء بتكمل اللمة.</p>
-        <a href="#menu" class="btn btn-primary">شوف خيارات المنيو <span>←</span></a>
-      </div>
-    </section>
-
-    <!-- MENU -->
-    <section class="menu-section section-pad" id="menu">
-      <div class="section-heading reveal">
-        <div>
-          <span class="section-number">04 / المنيو</span>
-          <p class="eyebrow dark">MADE FOR YOUR MOOD</p>
-          <h2>شو <em>عبالك اليوم؟</em></h2>
         </div>
-        <p class="section-description">
-          من فنجان القهوة للمشروب اللي بتحبه، اختار من قائمتنا.
-        </p>
-      </div>
-
-      <div class="menu-tabs" role="tablist">
-        <button class="menu-tab active" data-category="hot">مشروبات ساخنة</button>
-        <button class="menu-tab" data-category="cold">مشروبات باردة</button>
-        <button class="menu-tab" data-category="juice">عصائر وموهيتو</button>
-        <button class="menu-tab" data-category="milkshake">ميلك شيك</button>
-        <button class="menu-tab" data-category="mix">خلطات</button>
-        <button class="menu-tab" data-category="argileh">أراجيل</button>
-      </div>
-
-      <div class="menu-grid" id="menuGrid">
-        <!-- JavaScript displays menu items here -->
-      </div>
-
-      <p class="menu-note">بعض الأصناف أسعارها عند الطلب. للاستفسار تواصل معنا.</p>
-    </section>
-
-    <!-- DRINK VISUAL -->
-    <section class="drink-banner">
-      <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=2000&q=85"
-        alt="مشروبات منعشة">
-      <div class="drink-banner-overlay"></div>
-      <div class="drink-banner-content reveal">
-        <p class="eyebrow">A LITTLE REFRESHMENT</p>
-        <h2>لحظتك الحلوة<br><em>بتبدأ من هون.</em></h2>
-        <a href="#menu" class="btn btn-outline">تصفح المشروبات</a>
-      </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section class="gallery-section section-pad" id="gallery">
-      <div class="section-heading reveal">
-        <div>
-          <span class="section-number">05 / من الياطر</span>
-          <p class="eyebrow dark">LIFE AT AL YATER</p>
-          <h2>لحظات <em>من المكان.</em></h2>
+        <div class="story-copy">
+          <span class="eyebrow">حكايتنا</span>
+          <h2>أكثر من مجرد<br><em>مكان للقهوة</em></h2>
+          <div class="gold-divider">✦ ━━━━━━━━━ ✦</div>
+          <p>منذ عام 1995، والياطر مساحة تجمع الناس على المحبة والذكريات. مكان يحتفظ بروح الماضي، ويستقبل الحاضر بكل دفء.</p>
+          <p>بين فنجان القهوة، وجلسات الأصدقاء، وألعاب الشدة والطاولة، نصنع لحظات تستحق أن تبقى في الذاكرة.</p>
+          <a class="text-link" href="#gallery">شاهد أجواء الياطر <span>←</span></a>
         </div>
-        <p class="section-description">صور من أجواء الياطر وتفاصيله.</p>
-      </div>
-
-      <div class="gallery-grid">
-        <img class="gallery-large reveal" src="صور%20الياطر/728afc42-2aaf-462c-afff-5b368222be5b.jpg" alt="من داخل الياطر">
-        <img class="reveal" src="صور%20الياطر/a3617c65-1dfd-4bb6-ae0e-25f1445fa946.jpg" alt="تفاصيل المكان">
-        <img class="reveal" src="صور%20الياطر/f9451ed6-93fb-4a45-b19f-272933cec38a.jpg" alt="أجواء الياطر">
-        <img class="reveal" src="صور%20الياطر/e058a08e-e350-4d2c-a4f2-eafbec0a2562.jpg" alt="من ذكريات الياطر">
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <section class="section menu-section" id="menu">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">مذاقات الياطر</span>
+          <h2>قائمة <em>المشروبات</em></h2>
+          <p>اختَر مذاقك المفضل واستمتع بوقتك</p>
+          <div class="gold-divider">✦ ━━━━━━━━━ ✦</div>
+        </div>
+
+        <div class="menu-tabs" id="menuTabs">
+          <button class="tab active" data-category="hot">ساخنة</button>
+          <button class="tab" data-category="cold">باردة</button>
+          <button class="tab" data-category="juice">عصائر وموهيتو</button>
+          <button class="tab" data-category="milkshake">ميلك شيك</button>
+          <button class="tab" data-category="mix">خلطات</button>
+          <button class="tab" data-category="shisha">أراجيل</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid"></div>
+        <p class="menu-note">بعض الأصناف أسعارها عند الطلب. للاستفسار عن الأسعار والتوفر، تواصل معنا.</p>
+      </div>
+    </section>
+
+    <section class="quote-band">
+      <div class="container quote-content">
+        <span>✦</span>
+        <p>في الياطر، القهوة إلها حكاية<br>والجلسة إلها طعم ثاني</p>
+        <small>كوفي الياطر · منذ 1995</small>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">من داخل الياطر</span>
+          <h2>تفاصيل <em>تحكي حكايتنا</em></h2>
+          <p>لقطات من المكان والذكريات والجلسات</p>
+          <div class="gold-divider">✦ ━━━━━━━━━ ✦</div>
+        </div>
+        <div class="gallery-grid">
+          <img src="صور الياطر/0f680829-f1b7-4d8d-a3b5-6e246eef0502.jpg" alt="كوفي الياطر">
+          <img src="صور الياطر/5b467df7-8c0a-4d03-be2f-6e2cbe7121e4.jpg" alt="جلسات الياطر">
+          <img src="صور الياطر/5662d9ed-c1a7-4f24-9b26-b882d5c8625b.jpg" alt="أجواء الياطر">
+          <img src="صور الياطر/61e0e5e8-e4c9-4e5e-8921-0130575f4657.jpg" alt="تفاصيل المكان">
+          <img src="صور الياطر/e73a7197-0678-4e98-8f61-396b96880df7.jpg" alt="من أجواء الكوفي">
+          <img src="صور الياطر/c0d6f805-8e7d-485b-ae80-65a533b6c9a8.jpg" alt="جلسة في الياطر">
+        </div>
+      </div>
+    </section>
+
     <section class="contact-section" id="contact">
-      <div class="contact-content reveal">
-        <span class="section-number">06 / بنستناك</span>
-        <p class="eyebrow">COME SAY HELLO</p>
-        <h2>القعدة أحلى<br><em>لما تكون معنا.</em></h2>
-        <p>المفرق – شارع جرش</p>
-        <a href="tel:0796454923" class="contact-phone" dir="ltr">0796454923</a>
-        <div class="contact-actions">
-          <a href="https://wa.me/962796454923" target="_blank" rel="noopener" class="btn btn-primary">تواصل واتساب</a>
-          <a href="https://www.google.com/maps/search/?api=1&query=كوفي+الياطر+المفرق+شارع+جرش" target="_blank" rel="noopener" class="btn btn-outline">موقعنا على الخريطة</a>
+      <div class="container contact-grid">
+        <div>
+          <span class="eyebrow">ننتظركم</span>
+          <h2>زيارتكم <em>بتسعدنا</em></h2>
+          <p>مروا علينا، وخلي قهوتكم القادمة من الياطر.</p>
+          <div class="contact-detail"><span>☎</span><div><small>اتصل بنا</small><a href="tel:0796454923">0796454923</a></div></div>
+          <div class="contact-detail"><span>⌖</span><div><small>موقعنا</small><strong>المفرق - شارع جرش</strong></div></div>
+          <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&query=كوفي+الياطر+المفرق+شارع+جرش" target="_blank" rel="noopener">افتح الموقع على الخريطة</a>
+        </div>
+        <div class="map-frame">
+          <iframe title="موقع كوفي الياطر" src="https://maps.google.com/maps?q=المفرق%20شارع%20جرش&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
         </div>
       </div>
-      <div class="contact-decoration">الياطر</div>
     </section>
-
   </main>
 
   <footer class="footer">
-    <a href="#home" class="footer-logo">الياطر</a>
-    <p>منذ 1995 · المفرق، شارع جرش</p>
-    <p>© <span id="year"></span> كوفي الياطر. جميع الحقوق محفوظة.</p>
+    <a class="brand footer-brand" href="#top"><span class="brand-mark">الياطر</span><span class="brand-caption">SINCE 1995</span></a>
+    <p>حكاية مذاق أصيل وذكريات لا تنتهي</p>
+    <span>© <span id="year"></span> كوفي الياطر - جميع الحقوق محفوظة</span>
   </footer>
 
+  <a class="floating-call" href="tel:0796454923" aria-label="اتصل بنا">☎</a>
   <script src="script.js"></script>
 </body>
 </html>
