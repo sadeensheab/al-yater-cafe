@@ -14,6 +14,7 @@ const menuItems = {
     { name: "مليسة", price: "1.00 دينار", image: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=600" },
     { name: "زنجبيل مع ليمون وعسل", price: "1.50 دينار", image: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600" }
   ],
+
   cold: [
     { name: "بيبسي", price: "1.00 دينار", image: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=600" },
     { name: "سفن أب", price: "1.00 دينار", image: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?w=600" },
@@ -22,6 +23,7 @@ const menuItems = {
     { name: "بي إم BM", price: "1.25 دينار", image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600" },
     { name: "بوم بوم Boom Boom", price: "1.75 دينار", image: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?w=600" }
   ],
+
   juice: [
     { name: "ليمون ونعناع", price: "السعر عند الطلب", image: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?w=600" },
     { name: "عصير برتقال", price: "السعر عند الطلب", image: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=600" },
@@ -36,6 +38,7 @@ const menuItems = {
     { name: "موهيتو سفن أب حلو", price: "السعر عند الطلب", image: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?w=600" },
     { name: "موهيتو ليمون ونعناع", price: "السعر عند الطلب", image: "https://images.unsplash.com/photo-1513558161293-cdaf765edfd4?w=600" }
   ],
+
   milkshake: [
     { name: "ميلك شيك أوريو", price: "السعر عند الطلب", image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600" },
     { name: "ميلك شيك سنكرز", price: "السعر عند الطلب", image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600" },
@@ -45,6 +48,7 @@ const menuItems = {
     { name: "ميلك شيك لوتس", price: "السعر عند الطلب", image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600" },
     { name: "ميلك شيك عربي", price: "السعر عند الطلب", image: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600" }
   ],
+
   mix: [
     { name: "مكس بوم بوم حلو", price: "1.75 دينار", image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600" },
     { name: "مكس بوم بوم حامض", price: "1.75 دينار", image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600" },
@@ -60,6 +64,7 @@ const menuItems = {
     { name: "مكس رمان", price: "السعر عند الطلب", image: "https://images.unsplash.com/photo-1546173159-315724a31696?w=600" },
     { name: "مكس باشن فروت", price: "السعر عند الطلب", image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600" }
   ],
+
   shisha: [
     { name: "تفاحتين نخلة", price: "3.00 دنانير", image: "صور الياطر/e73a7197-0678-4e98-8f61-396b96880df7.jpg" },
     { name: "تفاحتين مزايا", price: "2.50 دينار", image: "صور الياطر/e73a7197-0678-4e98-8f61-396b96880df7.jpg" },
@@ -73,6 +78,7 @@ const menuItems = {
   ]
 };
 
+// عرض أصناف القائمة
 const menuGrid = document.getElementById("menuGrid");
 const menuTabs = document.getElementById("menuTabs");
 
@@ -81,8 +87,11 @@ function showMenu(category) {
 
   menuGrid.innerHTML = items.map(item => `
     <article class="menu-card">
-      <img src="${item.image}" alt="${item.name}" loading="lazy"
-           onerror="this.onerror=null;this.src='https://placehold.co/600x400/3a2417/e8c58b?text=Al+Yater'">
+      <img
+        src="${item.image}"
+        alt="${item.name}"
+        loading="lazy"
+        onerror="this.onerror=null;this.src='https://placehold.co/600x400/3a2417/e8c58b?text=Al+Yater'">
       <div class="menu-card-body">
         <h3>${item.name}</h3>
         <span class="menu-price">${item.price}</span>
@@ -103,7 +112,7 @@ menuTabs.addEventListener("click", event => {
 
 showMenu("hot");
 
-// Hero slideshow
+// صور الواجهة المتحركة
 const heroImage = document.getElementById("heroImage");
 const slideNumber = document.getElementById("slideNumber");
 
@@ -113,12 +122,13 @@ const heroPhotos = [
   "صور الياطر/4a7b5cfe-2223-4126-8ead-0209073ce97e.jpg"
 ];
 
-let currentSlide = 0;
-
+// تحميل الصور مسبقاً لتقليل التأخير عند التبديل
 heroPhotos.forEach(src => {
   const image = new Image();
   image.src = src;
 });
+
+let currentSlide = 0;
 
 setInterval(() => {
   currentSlide = (currentSlide + 1) % heroPhotos.length;
@@ -131,7 +141,7 @@ setInterval(() => {
   }, 450);
 }, 5500);
 
-// Mobile navigation
+// قائمة التنقل على الموبايل
 const menuToggle = document.getElementById("menuToggle");
 const mainNav = document.getElementById("mainNav");
 
@@ -140,24 +150,31 @@ menuToggle.addEventListener("click", () => {
 });
 
 mainNav.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => mainNav.classList.remove("open"));
+  link.addEventListener("click", () => {
+    mainNav.classList.remove("open");
+  });
 });
 
-// Footer year
+// السنة الحالية في أسفل الموقع
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Highlight active navigation link while scrolling
-const sections = document.querySelectorAll("main section[id], main section.hero");
+// تمييز رابط القسم الحالي في القائمة
 const navLinks = document.querySelectorAll(".nav a");
 
 window.addEventListener("scroll", () => {
   let current = "top";
 
-  document.querySelectorAll("#story, #menu, #gallery, #contact").forEach(section => {
-    if (window.scrollY >= section.offsetTop - 150) current = section.id;
+  ["story", "menu", "gallery", "contact"].forEach(id => {
+    const section = document.getElementById(id);
+    if (section && window.scrollY >= section.offsetTop - 150) {
+      current = id;
+    }
   });
 
   navLinks.forEach(link => {
-    link.classList.toggle("active", link.getAttribute("href") === `#${current}`);
+    link.classList.toggle(
+      "active",
+      link.getAttribute("href") === `#${current}`
+    );
   });
 });
