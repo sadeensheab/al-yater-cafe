@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1b0d07">
+<title>كوفي الياطر | حكاية مذاق أصيل منذ 1995</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--dark:#1b0d07;--brown:#32190e;--gold:#d6a45c;--light:#f1d39b;--cream:#f2e3c9;--muted:#cbb69c}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--dark);color:#f8eddb;font-family:Cairo,sans-serif;line-height:1.8}
+a{text-decoration:none;color:inherit}
+button{font:inherit;cursor:pointer}
+.container{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#1b0d07f5;border-bottom:1px solid #76502d}
+nav{min-height:78px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font: bold 28px Amiri;color:var(--light)}
+.logo small{display:block;font:10px Cairo;text-align:center;letter-spacing:3px;color:var(--gold)}
+.links{display:flex;gap:24px;align-items:center}
+.links a{font-size:14px;color:#eee0cc}
+.links a:hover{color:var(--gold)}
+.phone{border:1px solid var(--gold);padding:7px 14px;border-radius:25px;color:var(--light)!important}
+.toggle{display:none;background:none;color:var(--light);border:1px solid var(--gold);padding:5px 12px;border-radius:7px;font-size:22px}
+.hero{min-height:620px;display:flex;align-items:center;background:linear-gradient(90deg,#1b0d0730,#1b0d07ed 75%),url('صور%20الياطر/f9451ed6-93fb-4a45-b19f-272933cec38a.jpg') center/cover}
+.hero-content{padding:90px 0}
+.kicker{color:var(--gold);letter-spacing:3px;font-size:13px}
+h1{font: bold clamp(48px,7vw,82px) Amiri;color:var(--light);line-height:1.3}
+.hero h2{font-size:24px;color:var(--cream);font-weight:500}
+.hero p{max-width:520px;color:#e6d5c0;margin:18px 0 28px}
+.btn{display:inline-block;padding:11px 24px;border:1px solid var(--gold);border-radius:7px;margin:4px;font-weight:bold}
+.primary{background:var(--gold);color:#211006}
+.outline{color:var(--light)}
+.features{background:var(--cream);color:#32190e;padding:25px 0}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+.feature{padding:10px;border-left:1px solid #c5a47a}
+.feature:last-child{border:0}
+.feature span{display:block;font-size:30px;color:#9c5d24}
+section{padding:80px 0}
+.heading{text-align:center;margin-bottom:38px}
+.heading span{color:var(--gold);letter-spacing:3px;font-size:13px}
+.heading h2{font: bold 43px Amiri;color:var(--light)}
+.heading p{color:var(--muted);font-size:14px}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.story-photo{padding:10px;border:1px solid var(--gold);background:var(--brown)}
+.story-photo img{width:100%;height:390px;object-fit:cover;display:block}
+.story-text h2{font: bold 40px Amiri;color:var(--light);margin:10px 0}
+.story-text p{color:#d9c5ac;margin:12px 0}
+.menu-section{background:linear-gradient(#291408,#160903);border-block:1px solid #674525}
+.tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:30px}
+.tab{background:transparent;color:var(--cream);border:1px solid #8b6037;padding:9px 19px;border-radius:30px}
+.tab.active,.tab:hover{background:var(--gold);color:#211006}
+.menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.item{background:#382013;border:1px solid #79502e;border-radius:12px;overflow:hidden;transition:.25s}
+.item:hover{transform:translateY(-5px)}
+.item img{width:100%;height:160px;object-fit:cover;display:block}
+.item-info{text-align:center;padding:12px}
+.item-info h3{color:var(--light);font-size:16px}
+.price{display:inline-block;background:var(--gold);color:#211006;padding:2px 14px;border-radius:20px;font-size:13px;font-weight:bold;margin-top:7px}
+.note{text-align:center;color:var(--muted);font-size:13px;margin-top:20px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gallery img{width:100%;height:230px;object-fit:cover;border:1px solid #79502e;border-radius:9px;transition:.25s}
+.gallery img:hover{transform:scale(1.025)}
+.contact{background:#120802;border-top:1px solid #674525}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.contact-card{background:#2b160d;border:1px solid #79502e;border-radius:12px;padding:28px}
+.contact-card h3{font: bold 28px Amiri;color:var(--light);margin-bottom:14px}
+.contact-card p{color:#ddcbb4;margin:12px 0}
+.map{min-height:210px;background:linear-gradient(135deg,#65462e,#241208);border-radius:9px;display:grid;place-items:center;text-align:center;padding:20px;color:var(--light)}
+.map span{font-size:40px}
+footer{text-align:center;padding:25px;color:var(--muted);font-size:13px;border-top:1px solid #674525}
+footer strong{color:var(--light)}
+@media(max-width:850px){.links{gap:12px}.links a{font-size:12px}.menu-grid{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){
+.toggle{display:block}
+.links{display:none;position:absolute;top:78px;right:0;left:0;background:#211006;padding:20px;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--gold)}
+.links.open{display:flex}
+.links a{font-size:15px;padding:6px}
+.hero{min-height:540px;background-position:center}
+.hero-content{padding:65px 0}
+.feature-grid{grid-template-columns:repeat(2,1fr)}
+.feature:nth-child(2){border-left:0}
+section{padding:60px 0}
+.heading h2{font-size:36px}
+.story-grid,.contact-grid{grid-template-columns:1fr;gap:25px}
+.story-photo img{height:280px}
+.menu-grid{gap:10px}
+.item img{height:125px}
+.item-info{padding:9px 4px}
+.item-info h3{font-size:14px}
+.gallery{gap:9px}
+.gallery img{height:150px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container">
+<nav>
+<a class="logo" href="#home">كوفي الياطر<small>SINCE 1995</small></a>
+<button class="toggle" id="toggle">☰</button>
+<div class="links" id="links">
+<a href="#home">الرئيسية</a>
+<a href="#story">عن الكوفي</a>
+<a href="#menu">القائمة</a>
+<a href="#gallery">الصور</a>
+<a href="#contact">اتصل بنا</a>
+<a class="phone" href="tel:0796454923">☎ 0796454923</a>
+</div>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="container hero-content">
+<div class="kicker">أهلاً وسهلاً بكم</div>
+<h1>كوفي الياطر</h1>
+<h2>حكاية مذاق أصيل منذ عام 1995</h2>
+<p>مكان يجمع عبق الماضي وراحة الحاضر، وأجواء دافئة للّمة الأحباب والأصدقاء.</p>
+<a class="btn primary" href="#menu">☕ تصفح القائمة</a>
+<a class="btn outline" href="#story">اكتشف حكايتنا</a>
+</div>
+</section>
+
+<div class="features">
+<div class="container feature-grid">
+<div class="feature"><span>☕</span><b>مشروبات ساخنة وباردة</b></div>
+<div class="feature"><span>🍹</span><b>عصائر وخلطات متنوعة</b></div>
+<div class="feature"><span>🍳</span><b>فطور ومأكولات</b></div>
+<div class="feature"><span>🎲</span><b>ألعاب وترفيه</b></div>
+</div>
+</div>
+
+<section id="story">
+<div class="container story-grid">
+<div class="story-photo">
+<img src="صور%20الياطر/e73a7197-0678-4e98-8f61-396b96880df7.jpg" alt="ذكريات كوفي الياطر">
+</div>
+<div class="story-text">
+<div class="kicker">حكايتنا وذكرياتنا</div>
+<h2>قصة كوفي الياطر</h2>
+<p>منذ عام 1995، نرحب بضيوفنا في أجواء تحمل طابعاً أصيلاً يجمع الناس على القهوة والحديث والذكريات الجميلة.</p>
+<p>نؤمن أن أجمل اللحظات تبدأ بجمعة حلوة، وفنجان قهوة، ومكان تشعر فيه أنك بين أهلك وأصحابك.</p>
+<a class="btn outline" href="#contact">زورونا اليوم ←</a>
+</div>
+</div>
+</section>
+
+<section class="menu-section" id="menu">
+<div class="container">
+<div class="heading">
+<span>مذاقات ترضي جميع الأذواق</span>
+<h2>قائمة المشروبات</h2>
+<p>اختار مشروبك المفضل واستمتع بأجوائنا</p>
+</div>
+<div class="tabs">
+<button class="tab active" data-cat="hot">المشروبات الساخنة</button>
+<button class="tab" data-cat="cold">المشروبات الباردة</button>
+<button class="tab" data-cat="juice">العصائر والكوكتيلات</button>
+<button class="tab" data-cat="mix">الخلطات</button>
+</div>
+<div class="menu-grid" id="menuGrid"></div>
+<p class="note">الأسعار بالدينار الأردني، والأسعار غير المتوفرة ستضاف بعد تأكيدها.</p>
+</div>
+</section>
+
+<section id="gallery">
+<div class="container">
+<div class="heading">
+<span>عيشوا الأجواء</span>
+<h2>من أجواء كوفي الياطر</h2>
+<p>تفاصيل المكان والذكريات واللحظات الحلوة</p>
+</div>
+<div class="gallery">
+<img src="صور%20الياطر/f9451ed6-93fb-4a45-b19f-272933cec38a.jpg" alt="واجهة الكوفي">
+<img src="صور%20الياطر/0f680829-f1b7-4d8d-a3b5-6e246eef0502.jpg" alt="جلسات الكوفي">
+<img src="صور%20الياطر/4a7b5cfe-2223-4126-8ead-0209073ce97e.jpg" alt="واجهة المكان">
+<img src="صور%20الياطر/5662d9ed-c1a7-4f24-9b26-b882d5c8625b.jpg" alt="ديكور الكوفي">
+<img src="صور%20الياطر/a3617c65-1dfd-4bb6-ae0e-25f1445fa946.jpg" alt="ديكور تراثي">
+<img src="صور%20الياطر/89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg" alt="جلسة وأجواء">
+<img src="صور%20الياطر/728afc42-2aaf-462c-afff-5b368222be5b.jpg" alt="ألعاب وجلسات">
+<img src="صور%20الياطر/b5d9b078-12e6-498d-afbe-ad713e69921e.jpg" alt="ألعاب الشدة">
+<img src="صور%20الياطر/c0d6f805-8e7d-485b-ae80-65a533b6c9a8.jpg" alt="شبابيك المكان">
+<img src="صور%20الياطر/e058a08e-e350-4d2c-a4f2-eafbec0a2562.jpg" alt="أجواء القهوة">
+<img src="صور%20الياطر/61e0e5e8-e4c9-4e5e-8921-0130575f4657.jpg" alt="ذكريات المكان">
+<img src="صور%20الياطر/48e1629b-fd47-4e14-97df-1da34a3ae283.jpg" alt="تفاصيل المكان">
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+<div class="heading">
+<span>نسعد بزيارتكم</span>
+<h2>تواصلوا معنا</h2>
+<p>أهلاً وسهلاً فيكم في كوفي الياطر</p>
+</div>
+<div class="contact-grid">
+<div class="contact-card">
+<h3>معلومات التواصل</h3>
+<p>☎ الهاتف: <a href="tel:0796454923">0796454923</a></p>
+<p>📍 الموقع: المفرق – شارع جرش</p>
+<a class="btn primary" href="https://wa.me/962796454923" target="_blank" rel="noopener">تواصل عبر واتساب</a>
+</div>
+<div class="contact-card">
+<h3>موقعنا</h3>
+<a href="https://www.google.com/maps/search/?api=1&query=كوفي+الياطر+المفرق+شارع+جرش" target="_blank" rel="noopener">
+<div class="map"><div><span>📍</span><br><b>المفرق – شارع جرش</b><br>اضغط لفتح الموقع على خرائط Google</div></div>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<p>© 2026 <strong>كوفي الياطر</strong> – جميع الحقوق محفوظة</p>
+<p>صُنع بكل حب بواسطة Velora</p>
+</footer>
+
+<script>
+const base="صور%20الياطر/";
+const data={
+hot:[
+["قهوة تركي صغيرة","1.00","0f680829-f1b7-4d8d-a3b5-6e246eef0502.jpg"],
+["قهوة تركي كبيرة","1.50","e058a08e-e350-4d2c-a4f2-eafbec0a2562.jpg"],
+["شاي كرك","1.00","48e1629b-fd47-4e14-97df-1da34a3ae283.jpg"],
+["نسكافيه","1.00","e058a08e-e350-4d2c-a4f2-eafbec0a2562.jpg"],
+["شوكولاتة ساخنة","1.00","48e1629b-fd47-4e14-97df-1da34a3ae283.jpg"],
+["لاتيه","1.00","0f680829-f1b7-4d8d-a3b5-6e246eef0502.jpg"],
+["زهورات","1.00","48e1629b-fd47-4e14-97df-1da34a3ae283.jpg"],
+["زنجبيل مع ليمون وعسل","1.50","48e1629b-fd47-4e14-97df-1da34a3ae283.jpg"]
+],
+cold:[
+["بيبسي","1.00","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
+["سفن أب","1.00","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
+["ميرندا","1.00","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
+["باربيكان","1.00","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
+["ميلك شيك","حسب الصنف","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"]
+],
+juice:[
+["ليمون ونعناع","حسب الصنف","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
+["عصير برتقال","حسب الصنف","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
+["كوكتيل فواكه","حسب الصنف","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
+["أفوكادو بالعسل والقشطة","حسب الصنف","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
+["عصير رمان","حسب الصنف","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"]
+],
+mix:[
+["خلطات BM","1.25","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
+["خلطات Boom Boom","1.75","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
+["موهيتو","حسب الصنف","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"],
+["مكسات إضافية","حسب الصنف","89d9e02a-8e9e-457b-862f-cfa6b85cceb2.jpg"]
+]
+};
+const grid=document.getElementById("menuGrid");
+function show(cat){
+grid.innerHTML=data[cat].map(x=>`<article class="item"><img src="${base+x[2]}" alt="${x[0]}" loading="lazy"><div class="item-info"><h3>${x[0]}</h3><span class="price">${x[1]==="حسب الصنف"?x[1]:x[1]+" دينار"}</span></div></article>`).join("");
+}
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>{
+document.querySelector(".tab.active").classList.remove("active");
+b.classList.add("active");show(b.dataset.cat);
+}));
+document.getElementById("toggle").addEventListener("click",()=>document.getElementById("links").classList.toggle("open"));
+document.querySelectorAll(".links a").forEach(a=>a.addEventListener("click",()=>document.getElementById("links").classList.remove("open")));
+show("hot");
+</script>
+</body>
+</html>
