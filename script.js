@@ -19,7 +19,7 @@ const menuItems = {
     { name: "بيبسي", price: "1.00 دينار" },
     { name: "سفن أب", price: "1.00 دينار" },
     { name: "ميرندا", price: "1.00 دينار" },
-    { name: "بيريكان", price: "1.00 دينار" },
+    { name: "بربيكان", price: "1.00 دينار" },
     { name: "بي إم (BM)", price: "1.00 دينار" },
     { name: "بوم بوم (Boom Boom)", price: "1.25 دينار" }
   ],
@@ -50,8 +50,7 @@ const menuItems = {
   ],
 
   mix: [
-    { name: "مكس كوداردو", price: "2.00 دينار" },
-
+    { name: "مكس كود رد (Code Red)", price: "2.00 دينار" },
     { name: "مكس بطيخ", price: "1.75 دينار" },
     { name: "مكس رمان", price: "1.75 دينار" },
     { name: "مكس باشن فروت", price: "1.75 دينار" },
